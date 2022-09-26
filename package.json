@@ -1,0 +1,45 @@
+{
+  "name": "shopipoints.com",
+  "version": "1.0.0",
+  "description": "Moar Shopipoints",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "node .dev/scripts/deploy.js",
+    "deploy:production": "node .dev/scripts/deploy.js -- --env=production --allowLive=true",
+    "watch": "node .dev/scripts/watch.js",
+    "lint:js": "eslint ./**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-kelly/shopipoints.com.git"
+  },
+  "keywords": [
+    "Shopify",
+    "KellyVaughn"
+  ],
+  "author": "The Kellys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-kelly/shopipoints.com/issues"
+  },
+  "homepage": "https://github.com/t-kelly/shopipoints.com#readme",
+  "devDependencies": {
+    "@shopify/eslint-plugin": "^39.0.3",
+    "@shopify/themekit": "^1.1.6",
+    "eslint": "^7.13.0",
+    "node-fetch": "^2.6.1",
+    "yargs": "^16.1.1"
+  },
+
+  "eslintConfig": {
+    "extends": ["plugin:@shopify/esnext"],
+    
+    "overrides": [
+      {
+        "extends": ["plugin:@shopify/node"],
+        "files": ["./scripts/*.js"]
+      }
+    ]
+  }
+}

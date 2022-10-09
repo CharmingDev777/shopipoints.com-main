@@ -2,3 +2,5 @@
 
 
 Shopify custom theme from Dawn theme 6.0.2
+
+# Shopify premium theme
